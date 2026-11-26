@@ -1,0 +1,24 @@
+---
+layout: default
+---
+{% assign app = site.apps[page.categories.first] %}
+<article class="post">
+  <p class="crumb"><a href="{{ '/' | append: page.categories.first | append: '/' | relative_url }}">{{ app.name | default: page.categories.first }}</a> › 教學</p>
+  <h1>{{ page.title }}</h1>
+  <p class="meta">{{ page.date | date: '%Y-%m-%d' }}{% if page.minutes %}　·　閱讀約 {{ page.minutes }} 分鐘{% endif %}</p>
+
+  <div class="post-body">
+    {{ content }}
+  </div>
+
+  {% if app %}
+  <aside class="cta">
+    <div>
+      <p class="cta-name">{{ app.name }}</p>
+      <p class="cta-tag">{{ app.tagline }}</p>
+    </div>
+    <a class="btn" href="{{ app.play }}">到 Google Play 下載</a>
+  </aside>
+  <p class="small"><a href="{{ app.privacy }}">隱私權政策</a></p>
+  {% endif %}
+</article>

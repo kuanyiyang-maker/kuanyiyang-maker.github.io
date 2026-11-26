@@ -1,0 +1,38 @@
+title: MagicSpark Studio
+description: MagicSpark Studio 的 App 使用教學與說明。
+url: https://kuanyiyang-maker.github.io
+baseurl: ""
+lang: zh-TW
+timezone: Asia/Taipei
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+permalink: /:categories/:title/
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+# 各 App 的基本資料（文章頁下方的下載框會用到）
+apps:
+  formuscript:
+    name: 算記 FormuScript
+    tagline: 科學計算機 × 224 個理工快速工具 × 公式筆記
+    play: https://play.google.com/store/apps/details?id=com.magicspark.appcalc
+    privacy: https://kuanyiyang-maker.github.io/formuscript-privacy/
+
+exclude:
+  - README.md
+  - .gitignore
+  - .gitattributes

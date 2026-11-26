@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% seo %}
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {% feed_meta %}
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <nav class="nav">
+        <a href="{{ '/' | relative_url }}">首頁</a>
+        <a href="{{ '/formuscript/' | relative_url }}">算記教學</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap main">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© {{ site.time | date: '%Y' }} MagicSpark Studio　·　聯絡：<a href="mailto:magicfkystudio@gmail.com">magicfkystudio@gmail.com</a></p>
+    </div>
+  </footer>
+</body>
+</html>
